@@ -15,7 +15,6 @@ const headers = {
     "Content-Type": "application/json",
 }
 
-
 // * Please DO NOT INCLUDE the private app access token in your repo. Don't do this practicum in your normal account.
 // ROUTE 1 - Create a new app.get route for the homepage to call your custom object data. Pass this data along to the front-end and create a new pug template in the views folder.
 
@@ -25,7 +24,7 @@ app.get("/", async (req, res) => {
     try {
         const { data } = await axios.get(url, { headers });
         res.render("index", {
-            title: "Pets | Integrating With HubSpot I Practicum",
+            title: "Pets",
             results: data.results,
         });
     } catch (error) {
@@ -37,7 +36,7 @@ app.get("/", async (req, res) => {
 
 app.get("/update-cobj", (req, res) => {
     res.render("update", {
-        title: "Update Pet Form | Integrating With HubSpot I Practicum",
+        title: "Update Pet Form",
     });
 });
 
