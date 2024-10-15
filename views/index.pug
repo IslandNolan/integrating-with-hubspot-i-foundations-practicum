@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Pet
+        table
+            each pet in results
+                tr
+                    td.card__name #{pet.properties.name}
+                    td.card__text.age #{pet.properties.age}
+                    td.card__text #{pet.properties.weight}
+                    td.card__text.breed #{pet.properties.breed}
+
+            a(href="/update-cobj") Add entry

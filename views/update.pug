@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        a(href="/") Return to the homepage
+        .form-wrapper
+            form(method="POST")
+                label(for="name") Name:
+                input(type="text" name="name" required)
+                label(for="age") Age:
+                input(type="text" name="age" required)
+                label(for="weight") Weight:
+                input(type="text" name="weight" required)
+                label(for="breed") Breed:
+                input(type="text" name="breed" required)
+                input(type="submit" value="Submit")
